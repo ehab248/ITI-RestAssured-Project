@@ -1,0 +1,20 @@
+
+<suite name="TodosTestSuite">
+    <test name="TodosTests">
+        <classes>
+            <class name="Todos_Tests.Register_Test"/>
+            <class name="Todos_Tests.Invalid_Login_Test"/>
+            <class name="Todos_Tests.Login_Test"/>
+            <class name="Todos_Tests.Create_Task_Test"/>
+            <class name="Todos_Tests.Show_Task_Test"/>
+            <class name="Todos_Tests.Show_All_Tasks_Test"/>
+            <class name="Todos_Tests.Update_Task_Test"/>
+            <class name="Todos_Tests.Delete_Task_Test"/>
+            <class name="Todos_Tests.Invalid_Show_Task_Test"/>
+            <class name="Todos_Tests.User_Tasks_Stats_Test"/>
+            <class name="Todos_Tests.Logout_Test"/>
+            <class name="Todos_Tests.Invalid_User_Tasks_Stats_Test"/>
+        </classes>
+    </test>
+</suite>
+

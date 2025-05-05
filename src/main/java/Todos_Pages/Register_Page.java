@@ -9,10 +9,10 @@ public class Register_Page  extends Base {
 
         public Response registerUser(String username, String password) {
             String requestBody = "{\"username\": \"" + username + "\", \"password\": \"" + password + "\"}";
-            Response response = given().spec(request).body(requestBody)
+            return given().spec(request)
+                    .body(requestBody)
                     .when().post("/users/register")
                     .then().extract().response();
-            return response;
         }
 
 

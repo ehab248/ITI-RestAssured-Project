@@ -7,6 +7,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
 public class Base {
 
     public static RequestSpecification request;
@@ -27,10 +32,12 @@ public class Base {
         extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("reports/SparkReport.html");
         extent.attachReporter(spark);
+
     }
 
     @AfterSuite
-    public void flushReport() {
+    public void flushReport() throws IOException {
         extent.flush();
+        Desktop.getDesktop().open(new File("reports/SparkReport.html"));
     }
 }
